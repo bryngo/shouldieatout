@@ -8,7 +8,7 @@
 import Config
 
 config :myapp,
-  ecto_repos: [Myapp.Repo],
+  # ecto_repos: [Myapp.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
