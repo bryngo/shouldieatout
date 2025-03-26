@@ -6,7 +6,7 @@ defmodule MyappWeb.Light do
   alias Myapp.Presence
 
   @topic Brightness.topic()
-  @presence_topic "presence"
+  @presence_topic "light_presence"
 
   def mount(_params, _session, socket) do
     initial_present =

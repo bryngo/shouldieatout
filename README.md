@@ -1,5 +1,8 @@
 # Myapp
 
+## Running the app
+
+### Running Locally
 To start your Phoenix server:
 
   * Run `mix setup` to install and setup dependencies
@@ -9,6 +12,16 @@ To start your Phoenix server:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+
+### Running via Docker
+
+TODO figure out how to get secrets with docker
+```
+$ docker build -t <build_name> .
+```
+## Deployments
+
+Deployments to `main` are automatically picked up and deployed by Digital Ocean.
 
 ## Learn more
 
