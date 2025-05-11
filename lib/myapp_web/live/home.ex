@@ -64,8 +64,8 @@ defmodule MyappWeb.Home do
     </div>
 
     <div class="mt-10 text-center">
-      <.live_component module={PresenceComponent} id="home_presence" present={@present} /> other
-      <%= if @present == 1 do %>
+      <.live_component module={PresenceComponent} id="home_presence" present={@present - 1} /> other
+      <%= if @present - 1 == 1 do %>
         person
       <% else %>
         people
