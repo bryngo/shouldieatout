@@ -21,7 +21,7 @@ $ docker build -t <build_name> .
 ```
 ## Deployments
 
-Deployments to `main` are automatically picked up and deployed by Digital Ocean.
+Deployments to `main` are automatically picked up and deployed by Digital Ocean. This is configured in Digital Ocean.
 
 ## Learn more
 
