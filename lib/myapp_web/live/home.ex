@@ -6,7 +6,22 @@ defmodule MyappWeb.Home do
   @presence_topic "home_presence"
 
   def mount(_params, _session, socket) do
-    answers = ["YES!", "No :/", "Maybe?"]
+    answers = [
+      "YES!",
+      "No :/",
+      "Maybe?",
+      "You deserve it",
+      "Treat yourself!",
+      "Chipotleeeee",
+      "Late night Taco Bell run...?",
+      "Absoloutely",
+      "Ehhh, how about we save some money",
+      "It's good for the economy!",
+      "Don't think so",
+      "Nice try",
+      "Only if we get a sweet treat after",
+      "Thought you'd never ask :')"
+    ]
 
     initial_present =
       if connected?(socket) do
@@ -40,7 +55,7 @@ defmodule MyappWeb.Home do
           </div>
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <button phx-click="answer-question">
-              Hit Space or Click
+              Hit <span class="border-2 p-1 m-1 rounded-lg border-solid">Space</span> or Click
             </button>
           </div>
           <div phx-window-keydown="key_down"></div>
@@ -49,8 +64,13 @@ defmodule MyappWeb.Home do
     </div>
 
     <div class="mt-10 text-center">
-      <.live_component module={PresenceComponent} id="home_presence" present={@present} />
-      other people trying to decide.
+      <.live_component module={PresenceComponent} id="home_presence" present={@present} /> other
+      <%= if @present == 1 do %>
+        person
+      <% else %>
+        people
+      <% end %>
+      trying to decide.
     </div>
     """
   end
